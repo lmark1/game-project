@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/lmark/.conan/data/spdlog/1.5.0/_/_/source/source_subfolder/include",
+                "/home/lmark/.conan/data/imgui-sfml/2.1/bincrafters/stable/source/source_subfolder/imgui",
+                "/home/lmark/.conan/data/imgui-sfml/2.1/bincrafters/stable/source/source_subfolder",
+                "/home/lmark/.conan/data/sfml/2.5.1/bincrafters/stable/source/source_subfolder/include",
+                "/home/lmark/.conan/data/docopt.cpp/0.6.2/_/_/package/aa10c32850b15ef5456122906d38ebd7c80ab68c/include",
+                "/home/lmark/.conan/data/catch2/2.11.0/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/lib/ccache/gcc",
+            "cStandard": "c11",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

@@ -1,0 +1,4 @@
+{
+  "clang-format.executable": "/usr/bin/clang-format",
+  "clang-tidy.buildPath": "/home/lmark/Documents/cpp_weekly_game_project-build"
+}

@@ -1,0 +1,18 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CmakeRun",
+      "type": "shell",
+      "command": "rm -rf ${workspaceFolder}-build && mkdir ${workspaceFolder}-build && cd ${workspaceFolder}-build && /home/lmark/cmake_install/bin/cmake ${workspaceFolder}",
+      "group": "build"
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "cd ${workspaceFolder}-build && make"
+    }
+  ]
+}
