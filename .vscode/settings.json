@@ -1,4 +1,12 @@
 {
   "clang-format.executable": "/usr/bin/clang-format",
-  "clang-tidy.buildPath": "/home/lmark/Documents/cpp_weekly_game_project-build"
+  "clang-tidy.checks": ["*", "-fuchsia-*", "-google-*", "-zircon-*", "-abseil-*", "-modernize-use-trailing-return-type", "-llvm-*"],
+  "clang-tidy.buildPath": "/home/lmark/Documents/cpp_weekly_game_project-build",
+  "clang-tidy.compilerArgs": [
+    "-I/home/lmark/.conan/data/spdlog/1.5.0/_/_/source/source_subfolder/include",
+    "-I/home/lmark/.conan/data/catch2/2.11.0/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
+  ],
+  "files.associations": {
+    "iostream": "cpp"
+  }
 }

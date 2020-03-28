@@ -12,7 +12,8 @@
     {
       "label": "build",
       "type": "shell",
-      "command": "cd ${workspaceFolder}-build && make"
+      "command": "cd ${workspaceFolder}-build && make",
+      "group": "build"
     }
   ]
 }
