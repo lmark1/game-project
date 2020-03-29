@@ -85,7 +85,7 @@ clang-format --version
 Last command should output `clang-format version 6.0.0`.
 
 ### clang-tidy-9
-A tool for  diagnosing and fixing typical programming errors, like style violations, interface misuse, or bugs that can be deduced via static analysis. If you are using VSCode, also install the clang-tidy extension.
+A tool for  diagnosing and fixing typical programming errors, like style violations, interface misuse, or bugs that can be deduced via **STATIC** analysis. If you are using VSCode, also install the clang-tidy extension.
 Firstly, uninstall any previous clang-tidy versions using `sudo apt purge clang-tidy*`.
 ```
 sudo apt install llvm-9
@@ -165,6 +165,11 @@ pip install conan
 Doxygen is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL and to some extent D.
 ```
 sudo apt install doxygen
+```
+### Cppcheck
+Cppcheck is a **STATIC** analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to detect only real errors in the code (i.e. have very few false positives).
+```
+sudo apt install cppcheck
 ```
 
 ## VSCode setup
