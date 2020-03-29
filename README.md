@@ -116,6 +116,7 @@ sudo ln -s /usr/bin/clang-tidy-9 /usr/bin/clang-tidy
 ### cmake-3.17 (With ROS)
 Assuming the user is using ROS, cmake is unable to update past the 3.10 version as seen by command `cmake --version`. Solution used here is using 2 cmake programs; one installed globally (3.10) and one installed locally (3.17).
 ```
+sudo apt install libncurses5-dev
 cd ~/Downloads
 wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz
 tar -xzf cmake-3.17.0.tar.gz
