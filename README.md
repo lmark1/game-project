@@ -117,6 +117,7 @@ sudo ln -s /usr/bin/clang-tidy-9 /usr/bin/clang-tidy
 Assuming the user is using ROS, cmake is unable to update past the 3.10 version as seen by command `cmake --version`. Solution used here is using 2 cmake programs; one installed globally (3.10) and one installed locally (3.17).
 ```
 sudo apt install libncurses5-dev
+sudo apt install cmake-curses-gui
 cd ~/Downloads
 wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz
 tar -xzf cmake-3.17.0.tar.gz
@@ -128,6 +129,7 @@ make install
 Now cmake-3.17 lives in the `$HOME/cmake-install` folder. Only thing we need to do now is make an alias command towards the new cmake binary.
 ```
 echo alias cmake-3.17='$HOME/cmake_install/bin/cmake' >> ~/.bashrc
+echo alias ccmake-3.17='$HOME/cmake_install/bin/ccmake' >> ~/.bashrc
 source ~/.bashrc
 ```
 Lastly, check if we got the correct version using the command `cmake-3.17 --version`. It should output:
@@ -147,10 +149,8 @@ cmake-format --version
 Last command should output `0.6.9`.
 
 ### ccmake
-The “ccmake” executable is the CMake curses interface. Project configuration settings may be specified interactively through this GUI. Brief instructions are provided at the bottom of the terminal when the program is running.
-```
-sudo apt install cmake-curses-gui
-```
+The “ccmake” executable is the CMake curses interface. Project configuration settings may be specified interactively through this GUI. Brief instructions are provided at the bottom of the terminal when the program is running. Instructions are the same as Cmake section.
+
 ### ccache
 Ccache (or “ccache”) is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again.
 ```
