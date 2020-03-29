@@ -6,7 +6,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/ro4lbfoa7n0sy74c/branch/master?svg=true)](https://ci.appveyor.com/project/lefticus/cpp-starter-project/branch/master)
 
-## Installation
+## Prerequisites
 The following programs need to be installed prior to building this code.
 
 ### clang-format
