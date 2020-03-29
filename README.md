@@ -17,6 +17,7 @@ The following programs need to be installed prior to building this code.
 * ccmake
 * ccache
 * conan
+* doxygen
 
 ### gcc-9
 C/C++ compiler using the C++20 standard. It is assumed the user has gcc version 7.5 installed, however this installation is applicable for other versions as well. Firstly, install gcc-9 in the following way.
@@ -159,6 +160,13 @@ Conan is a dependency and package manager for C and C++ languages. Dependancies 
 ```
 pip install conan
 ```
+
+### Doxygen
+Doxygen is the de facto standard tool for generating documentation from annotated C++ sources, but it also supports other popular programming languages such as C, Objective-C, C#, PHP, Java, Python, IDL (Corba, Microsoft, and UNO/OpenOffice flavors), Fortran, VHDL and to some extent D.
+```
+sudo apt install doxygen
+```
+
 ## VSCode setup
 `.vscode` folder is intentionally left in this repository to ease the user experience when using this IDE with this project.
 However, there are some issues.
