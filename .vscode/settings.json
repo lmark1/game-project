@@ -3,10 +3,16 @@
   "clang-tidy.checks": ["*", "-fuchsia-*", "-google-*", "-zircon-*", "-abseil-*", "-modernize-use-trailing-return-type", "-llvm-*"],
   "clang-tidy.buildPath": "/home/lmark/Documents/cpp_weekly_game_project-build",
   "clang-tidy.compilerArgs": [
+    "-std=c++2a",
     "-I/home/lmark/.conan/data/spdlog/1.5.0/_/_/source/source_subfolder/include",
+    "-I/home/lmark/.conan/data/imgui-sfml/2.1/bincrafters/stable/source/source_subfolder/imgui",
+    "-I/home/lmark/.conan/data/imgui-sfml/2.1/bincrafters/stable/source/source_subfolder",
+    "-I/home/lmark/.conan/data/sfml/2.5.1/bincrafters/stable/source/source_subfolder/include",
+    "-I/home/lmark/.conan/data/docopt.cpp/0.6.2/_/_/package/aa10c32850b15ef5456122906d38ebd7c80ab68c/include",
     "-I/home/lmark/.conan/data/catch2/2.11.0/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
   ],
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "array": "cpp"
   }
 }
