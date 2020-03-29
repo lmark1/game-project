@@ -9,13 +9,38 @@
 ## Prerequisites
 The following programs need to be installed prior to building this code.
 
-### cmake-format
-A tool used to format Cmake code. Formatting specifications are found in .cmake-format file in the root of this project. If you are using VSCode, also install the cmake-format extension. Formatting shortcut is `CTRL+SHIFT+I`.
+### gcc-9
+C/C++ compiler using the C++20 standard. It is assumed the user has gcc version 7.5 installed, however this installation is applicable for other versions as well. Firstly, install gcc-9 in the following way.
 ```
-pip install cmake-format
-cmake-format --version
+sudo add-apt-repository ppa:jonathonf/gcc-9.0
+sudo apt update
+sudo apt install gcc-9
 ```
-Last command should output `0.6.9`.
+Next, we will configure the gcc symbolic link to switch between gcc-9 and gcc-7 as needed.
+```
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 60 --slave /usr/bin/g++ g++ /usr/bin/g++-9
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 50 --slave /usr/bin/g++ g++ /usr/bin/g++-7
+```
+We test out this functionality in the following way.
+```
+~$ sudo update-alternatives --config gcc
+# In the menu, please select the number next to the path to gcc-7
+~$ gcc --version
+gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+~$ sudo update-alternatives --config gcc
+# In the menu, please select the number next to the path to gcc-9
+~$ gcc --version
+gcc (Ubuntu 9-20190428-1ubuntu1~18.04.york0) 9.0.1 20190428 (prerelease) [gcc-9-branch revision 270630]
+Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+```
+For the remainder of this project we will use gcc-9 compiler.
 
 ### clang-9
 C/C++ compiler
@@ -77,3 +102,10 @@ then we need to create a symbolic link to clang-tidy using the following command
 ```
 sudo ln -s /usr/bin/clang-tidy-9 /usr/bin/clang-tidy
 ```
+### cmake-format
+A tool used to format Cmake code. Formatting specifications are found in .cmake-format file in the root of this project. If you are using VSCode, also install the cmake-format extension. Formatting shortcut is `CTRL+SHIFT+I`.
+```
+pip install cmake-format
+cmake-format --version
+```
+Last command should output `0.6.9`.
