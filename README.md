@@ -14,6 +14,8 @@ The following programs need to be installed prior to building this code.
 * clang-format
 * cmake-3.17
 * cmake-format
+* ccmake
+* ccache
 * conan
 
 ### gcc-9
@@ -140,6 +142,17 @@ pip install cmake-format
 cmake-format --version
 ```
 Last command should output `0.6.9`.
+
+### ccmake
+The “ccmake” executable is the CMake curses interface. Project configuration settings may be specified interactively through this GUI. Brief instructions are provided at the bottom of the terminal when the program is running.
+```
+sudo apt install cmake-curses-gui
+```
+### ccache
+Ccache (or “ccache”) is a compiler cache. It speeds up recompilation by caching previous compilations and detecting when the same compilation is being done again.
+```
+sudo apt install ccache
+```
 
 ### Conan
 Conan is a dependency and package manager for C and C++ languages. Dependancies listed for this project can be seen in the cmake/Conan.cmake file.
