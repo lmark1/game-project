@@ -8,6 +8,13 @@
 
 ## Prerequisites
 The following programs need to be installed prior to building this code.
+* gcc-9
+* clang-9
+* clang-tidy-9
+* clang-format
+* cmake-3.17
+* cmake-format
+* conan
 
 ### gcc-9
 C/C++ compiler using the C++20 standard. It is assumed the user has gcc version 7.5 installed, however this installation is applicable for other versions as well. Firstly, install gcc-9 in the following way.
@@ -102,6 +109,30 @@ then we need to create a symbolic link to clang-tidy using the following command
 ```
 sudo ln -s /usr/bin/clang-tidy-9 /usr/bin/clang-tidy
 ```
+### cmake-3.17 (With ROS)
+Assuming the user is using ROS, cmake is unable to update past the 3.10 version as seen by command `cmake --version`. Solution used here is using 2 cmake programs; one installed globally (3.10) and one installed locally (3.17).
+```
+cd ~/Downloads
+wget https://github.com/Kitware/CMake/releases/download/v3.17.0/cmake-3.17.0.tar.gz
+tar -xzf cmake-3.17.0.tar.gz
+cd cmake-3.17.0
+./bootstrap --prefix=$HOME/cmake-install
+make
+make install
+```
+Now cmake-3.17 lives in the `$HOME/cmake-install` folder. Only thing we need to do now is make an alias command towards the new cmake binary.
+```
+echo alias cmake-3.17='$HOME/cmake_install/bin/cmake' >> ~/.bashrc
+source ~/.bashrc
+```
+Lastly, check if we got the correct version using the command `cmake-3.17 --version`. It should output:
+```
+cmake version 3.17.0
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+```
+**IMPORTANT!** When building this project **ALWAYS** use cmake-3.17 command. Cmake versions <3.15 will be automatically rejected.
+
 ### cmake-format
 A tool used to format Cmake code. Formatting specifications are found in .cmake-format file in the root of this project. If you are using VSCode, also install the cmake-format extension. Formatting shortcut is `CTRL+SHIFT+I`.
 ```
@@ -109,3 +140,9 @@ pip install cmake-format
 cmake-format --version
 ```
 Last command should output `0.6.9`.
+
+### Conan
+Conan is a dependency and package manager for C and C++ languages. Dependancies listed for this project can be seen in the cmake/Conan.cmake file.
+```
+pip install conan
+```
