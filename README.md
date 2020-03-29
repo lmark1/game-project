@@ -146,3 +146,20 @@ Conan is a dependency and package manager for C and C++ languages. Dependancies 
 ```
 pip install conan
 ```
+## VSCode setup
+`.vscode` folder is intentionally left in this repository to ease the user experience when using this IDE with this project.
+However, there are some issues.
+* TODO: Hardcoded paths in .vscode/c_cpp_properties.json - Change accordingly
+* TODO: Hardcoded paths in .vscode/settings.json - Change - accordingly
+
+## Build
+To build this code position yourself at the root of this project and execute following commands.
+```
+cd ..
+mkdir game-project-build
+cd game-project-build
+cmake-3.17 ../game-project
+make
+```
+All executable files are located in `game-project-build/bin` folder. 
+Alternatively building with VSCode is a bit easier. `CTRL+SHIFT+B -> Select CmakeRun/build`.
