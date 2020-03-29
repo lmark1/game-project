@@ -25,6 +25,7 @@ C/C++ compiler using the C++20 standard. It is assumed the user has gcc version 
 sudo add-apt-repository ppa:jonathonf/gcc-9.0
 sudo apt update
 sudo apt install gcc-9
+sudo apt install g++-9
 ```
 Next, we will configure the gcc symbolic link to switch between gcc-9 and gcc-7 as needed.
 ```
