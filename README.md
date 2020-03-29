@@ -72,7 +72,7 @@ If you are unable to run `clang --version` check if there is a clang binary with
 lrwxrwxrwx  1 root root           23 sij  31 17:26 clang-9 -> ../lib/llvm-9/bin/clang
 # Some other output...
 ```
-then we need to create a symbolic link to clang-tidy using the following command:
+then we need to create a symbolic link to clang using the following command:
 ```
 sudo ln -s /usr/bin/clang-9 /usr/bin/clang
 ```
