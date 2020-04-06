@@ -12,7 +12,7 @@ include(cmake/StandardProjectSettings.cmake)
 # representing general compiler options needed to compile this project.
 add_library(project_options INTERFACE)
 
-# target_compil_features() - The INTERFACE, PUBLIC and PRIVATE keywords are required to specify the scope of the
+# target_compilr_features() - The INTERFACE, PUBLIC and PRIVATE keywords are required to specify the scope of the
 # features. PRIVATE and PUBLIC items will populate the COMPILE_FEATURES property of <target>. PUBLIC and INTERFACE items
 # will populate the INTERFACE_COMPILE_FEATURES property of <target>. The named <target> must have been created by a
 # command such as add_executable() or add_library()

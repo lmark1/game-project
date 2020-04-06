@@ -1,4 +1,4 @@
-function(enable_sanitizers project_name)
+function(enable_sanitizers target_name)
 
   if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL
                                              "Clang")
@@ -38,9 +38,9 @@ function(enable_sanitizers project_name)
 
   if(LIST_OF_SANITIZERS)
     if(NOT "${LIST_OF_SANITIZERS}" STREQUAL "")
-      target_compile_options(${project_name}
+      target_compile_options(${target_name}
                              INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
-      target_link_libraries(${project_name}
+      target_link_libraries(${target_name}
                             INTERFACE -fsanitize=${LIST_OF_SANITIZERS})
     endif()
   endif()
